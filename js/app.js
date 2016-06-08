@@ -2,24 +2,24 @@ $(document).foundation()
 $(document).ready(launch);
 
 var canvas, stage, exportRoot;
-function init() {
+function anim1() {
 	// --- write your JS code here ---
 	
-	canvas = document.getElementById("canvas");
-	images = images||{};
+	canvas = document.getElementById("canvas1");
+	exportRoot = new lib.ETAPE_1();
 
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", handleFileLoad);
-	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(lib.properties.manifest);
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
 }
-
-function handleFileLoad(evt) {
-	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-}
-
-function handleComplete(evt) {
-	exportRoot = new lib.Etapes();
+function anim2() {
+	// --- write your JS code here ---
+	
+	canvas = document.getElementById("canvas2");
+	exportRoot = new lib.ETAPE_2();
 
 	stage = new createjs.Stage(canvas);
 	stage.addChild(exportRoot);
@@ -34,7 +34,8 @@ function launch() {
   storyHover();
   videoHide();
   // TODO: Load on viewport
-  //init();
+  anim1();
+  anim2();
 }
 
 function storyHover() {
