@@ -55,7 +55,7 @@ function storyHover() {
 
 function videoHide() {
   $(".header video").on("ended", function() {
-    $(".header video").css();
+    $(".header video").hide();
     $(".header .content").show();
     stickyNavTop = $('.navbar').offset().top;
   });
