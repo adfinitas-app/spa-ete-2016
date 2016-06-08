@@ -1,41 +1,47 @@
-$(document).foundation()
+$(document).foundation();
 $(document).ready(launch);
 
+function sticky() {
+  var stickyNavTop = $('.navbar').offset().top;
+
+  var stickyNav = function() {
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop > stickyNavTop) { 
+      $('.navbar').addClass('sticky');
+    } else {
+      $('.navbar').removeClass('sticky'); 
+    }
+  };
+
+  stickyNav();
+
+  $(window).scroll(function() {
+    stickyNav();
+  });
+}
+
 var canvas, stage, exportRoot;
-function anim1() {
-	// --- write your JS code here ---
-	
-	canvas = document.getElementById("canvas1");
-	exportRoot = new lib.ETAPE_1();
+function launchAnim() {
+  // --- write your JS code here ---
 
-	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);
-	stage.update();
+  canvas = document.getElementById("canvas");
+  exportRoot = new lib.Etapes();
 
-	createjs.Ticker.setFPS(lib.properties.fps);
-	createjs.Ticker.addEventListener("tick", stage);
+  stage = new createjs.Stage(canvas);
+  stage.addChild(exportRoot);
+  stage.update();
+
+  createjs.Ticker.setFPS(lib.properties.fps);
+  createjs.Ticker.addEventListener("tick", stage);
 }
-function anim2() {
-	// --- write your JS code here ---
-	
-	canvas = document.getElementById("canvas2");
-	exportRoot = new lib.ETAPE_2();
-
-	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);
-	stage.update();
-
-	createjs.Ticker.setFPS(lib.properties.fps);
-	createjs.Ticker.addEventListener("tick", stage);
-}
-
 
 function launch() {
   storyHover();
   videoHide();
   // TODO: Load on viewport
-  anim1();
-  anim2();
+  launchAnim();
+  sticky();
 }
 
 function storyHover() {

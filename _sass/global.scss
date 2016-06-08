@@ -4,11 +4,20 @@ $brown: #7d6858;
 $amatic: 'Amatic SC', cursive;
 $open-sans: 'Open Sans', sans-serif;
 
+.sticky {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
 body, p {
   line-height: 1.2;
   text-align: center;
 }
-  
+
 h1 {
   font-family: $amatic;
   font-weight: bold;
