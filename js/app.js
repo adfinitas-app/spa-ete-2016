@@ -1,10 +1,10 @@
 $(document).foundation();
 $(document).ready(launch);
 
+var stickyNavTop;
 function sticky() {
-  var stickyNavTop = $('.navbar').offset().top;
 
-  var stickyNav = function() {
+  function stickyNav() {
     var scrollTop = $(window).scrollTop();
 
     if (scrollTop > stickyNavTop) { 
@@ -16,9 +16,7 @@ function sticky() {
 
   stickyNav();
 
-  $(window).scroll(function() {
-    stickyNav();
-  });
+  $(window).scroll(stickyNav);
 }
 
 var canvas, stage, exportRoot;
@@ -37,9 +35,9 @@ function launchAnim() {
 }
 
 function launch() {
+  stickyNavTop = $('.navbar').offset().top;
   storyHover();
   videoHide();
-  // TODO: Load on viewport
   launchAnim();
   sticky();
 }
@@ -57,7 +55,8 @@ function storyHover() {
 
 function videoHide() {
   $(".header video").on("ended", function() {
-    $(".header video").hide();
+    $(".header video").css();
     $(".header .content").show();
+    stickyNavTop = $('.navbar').offset().top;
   });
 }

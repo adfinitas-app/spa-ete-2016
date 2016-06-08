@@ -4,6 +4,23 @@ $brown: #7d6858;
 $amatic: 'Amatic SC', cursive;
 $open-sans: 'Open Sans', sans-serif;
 
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+.shadow-top {
+  height: 4px;
+  @include box-shadow(0, 3px, 4px, -3px, #232323);
+}
+
 .sticky {
   position: fixed;
   width: 100%;

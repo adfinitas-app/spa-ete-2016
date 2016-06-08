@@ -3,6 +3,38 @@
 
 @import 'global';
 
+.navbar {
+  .container {
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .left {
+      display: inline-block;
+      float: left;
+    }
+    .right {
+      display: inline-block;
+      float: right;
+    }
+    a {
+      margin-left: 40px;
+    }
+    .link {
+      color: $brown;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .logo {
+      height: 63px;
+      width: 58px;
+    }
+    .button {
+      padding: 20px 45px;
+    }
+  }
+}
+
 section.header {
   color: white;
   background-image: url("/img/header-bg.png");
