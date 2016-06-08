@@ -1,0 +1,41 @@
+$orange: #f36e2a;
+$brown: #7d6858;
+
+$amatic: 'Amatic SC', cursive;
+$open-sans: 'Open Sans', sans-serif;
+
+body, p {
+  line-height: 1.2;
+  text-align: center;
+}
+  
+h1 {
+  font-family: $amatic;
+  font-weight: bold;
+  font-size: 90px;
+  line-height: 1.1;
+}
+
+a:hover {
+  color: inherit;
+}
+
+@media only screen and (min-width: 40em) {
+  .button-group a:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.button {
+  background-color: $orange;
+  border: 0;
+  border-radius: 4px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 25px;
+
+  &:hover {
+    color: inherit;
+    background-color: $orange;
+  }
+}
