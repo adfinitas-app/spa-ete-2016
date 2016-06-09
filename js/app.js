@@ -1,22 +1,69 @@
 $(document).foundation();
 $(document).ready(launch);
 
+function part1(e) {
+  e.preventDefault();
+  $('html, body').animate({
+    scrollTop: 0
+  }, 1000);
+}
+function part2(e) {
+  e.preventDefault();
+  var size = $("#stories").offset().top;
+  if ($('.navbar').hasClass('sticky') == false) {
+    size -= (navSize + 5);
+  }
+  $('html, body').animate({
+    scrollTop: size
+  }, 1000);
+}
+function part3(e) {
+  e.preventDefault();
+  var size;
+  var size = $("#compte").offset().top - navSize;
+  if ($('.navbar').hasClass('sticky') == false) {
+    console.log("I'm in");
+    size -= navSize;
+  }
+  $('html, body').animate({
+    scrollTop: size
+  }, 1000);
+}
+function part4(e) {
+  e.preventDefault();
+  var size = $("#numbers").offset().top - navSize;
+  if ($('.navbar').hasClass('sticky') == false) {
+    console.log("I'm in");
+    size -= navSize;
+  }
+  $('html, body').animate({
+    scrollTop: size
+  }, 1000);
+}
+function launchAnchors() {
+  $("#top-anchor").on("click", part1)
+  $("#stories-anchor").on("click", part2)
+  $("#compte-anchor").on("click", part3)
+  $("#numbers-anchor").on("click", part4)
+}
+
 var stickyNavTop;
 function sticky() {
-
   function stickyNav() {
-    var scrollTop = $(window).scrollTop();
-
-    if (scrollTop > stickyNavTop) { 
+    if ($(window).scrollTop() >= stickyNavTop) {
       $('.navbar').addClass('sticky');
     } else {
-      $('.navbar').removeClass('sticky'); 
+      $('.navbar').removeClass('sticky');
     }
   };
-
   stickyNav();
-
-  $(window).scroll(stickyNav);
+  $(window).on("scroll", stickyNav);
+}
+function resetSticky() {
+  $('.navbar').removeClass('sticky');
+  $(window).off("scroll");
+  stickyNavTop = $('.navbar').offset().top;
+  sticky();
 }
 
 var canvas, stage, exportRoot;
@@ -36,9 +83,12 @@ function launchAnim() {
 
 function launch() {
   stickyNavTop = $('.navbar').offset().top;
+  navSize = $(".navbar .container").outerHeight();
+  navSize = 110;
   storyHover();
   videoHide();
   launchAnim();
+  launchAnchors();
   sticky();
 }
 
@@ -57,6 +107,6 @@ function videoHide() {
   $(".header video").on("ended", function() {
     $(".header video").hide();
     $(".header .content").show();
-    stickyNavTop = $('.navbar').offset().top;
+    resetSticky();
   });
 }
