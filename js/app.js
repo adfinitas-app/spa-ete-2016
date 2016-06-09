@@ -45,6 +45,7 @@ function launchAnchors() {
   $("#stories-anchor").on("click", part2)
   $("#compte-anchor").on("click", part3)
   $("#numbers-anchor").on("click", part4)
+  $("#team-anchor").on("click", part3)
 }
 
 var stickyNavTop;
