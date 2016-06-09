@@ -106,8 +106,8 @@ function storyHover() {
 
 function videoHide() {
   $(".header video").on("ended", function() {
-    $(".header video").hide();
-    $(".header .content").show();
+    $(".header video").slideUp();
+    $(".header .content").slideDown();
     resetSticky();
   });
 }
