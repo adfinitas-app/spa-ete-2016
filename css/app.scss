@@ -200,8 +200,9 @@ section.stadium {
   padding-bottom: 180px;
   background-image: url("/img/stadium-dog.png"), url("/img/stadium-bg.jpg");
   background-size: auto, cover;
-  background-position: 0% 50%, 0% 0%;
+  background-position: 0% -25%, 0% 0%;
   background-repeat: no-repeat, no-repeat;
+  background-attachment: fixed;
   color: white;
 
   .top-text {
