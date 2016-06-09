@@ -52,7 +52,7 @@ a:hover {
   }
 }
 
-.button {
+.button, .button:focus, .button:active {
   background-color: $orange;
   border: 0;
   border-radius: 4px;

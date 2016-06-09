@@ -22,7 +22,6 @@ function part3(e) {
   var size;
   var size = $("#compte").offset().top - navSize;
   if ($('.navbar').hasClass('sticky') == false) {
-    console.log("I'm in");
     size -= navSize;
   }
   $('html, body').animate({
@@ -33,7 +32,16 @@ function part4(e) {
   e.preventDefault();
   var size = $("#numbers").offset().top - navSize;
   if ($('.navbar').hasClass('sticky') == false) {
-    console.log("I'm in");
+    size -= navSize;
+  }
+  $('html, body').animate({
+    scrollTop: size
+  }, 1000);
+}
+function partDon(e) {
+  e.preventDefault();
+  var size = $("#don").offset().top - navSize;
+  if ($('.navbar').hasClass('sticky') == false) {
     size -= navSize;
   }
   $('html, body').animate({
@@ -46,6 +54,7 @@ function launchAnchors() {
   $("#compte-anchor").on("click", part3)
   $("#numbers-anchor").on("click", part4)
   $("#team-anchor").on("click", part3)
+  $("#don-btn").on("click", partDon)
 }
 
 var stickyNavTop;
