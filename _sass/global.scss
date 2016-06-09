@@ -16,6 +16,23 @@ $open-sans: 'Open Sans', sans-serif;
   }
 }
 
+.show-for-medium-up {
+  display: none;
+}
+@media only screen and (min-width: 40em) {
+  .show-for-medium-up {
+    display: block !important;
+  }
+}
+.show-for-small-only {
+  display: none;
+}
+@media only screen and (max-width: 39.9375em) {
+  .show-for-small-only {
+    display: block !important;
+  }
+}
+
 .shadow-top {
   height: 4px;
   @include box-shadow(0, 3px, 4px, -3px, #232323);
