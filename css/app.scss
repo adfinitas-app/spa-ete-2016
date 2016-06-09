@@ -3,6 +3,13 @@
 
 @import 'global';
 
+.off-canvas {
+  a {
+    color: $brown;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
 .navbar {
   .container {
     background-color: white;

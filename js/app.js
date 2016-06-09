@@ -50,11 +50,14 @@ function partDon(e) {
 }
 function launchAnchors() {
   $("#top-anchor").on("click", part1)
-  $("#stories-anchor").on("click", part2)
-  $("#compte-anchor").on("click", part3)
-  $("#numbers-anchor").on("click", part4)
-  $("#team-anchor").on("click", part3)
-  $("#don-btn").on("click", partDon)
+  $(".stories-anchor").on("click", part2)
+  $(".compte-anchor").on("click", part3)
+  $(".numbers-anchor").on("click", part4)
+  $(".team-anchor").on("click", part3)
+  $(".don-btn").on("click", partDon)
+  $(".off-canvas a").on("click", function() {
+    $('#offCanvas').foundation('close');
+  });
 }
 
 var stickyNavTop;
