@@ -98,7 +98,7 @@ function launch() {
   navSize = $(".navbar .container").outerHeight();
   navSize = 110;
   storyHover();
-  videoHide();
+  //videoHide();
   launchAnim();
   launchAnchors();
   sticky();
