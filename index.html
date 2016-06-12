@@ -26,6 +26,14 @@ title: "La SPA : N'abandonnez jamais"
     <div class="off-canvas-content" data-off-canvas-content>
       <!-- Page content -->
       <section class="header fullscreen-bg covervideo-wrapper">
+	<div class="large reveal" id="modalVideoFullscreen" data-reveal>
+	  <div class="flex-video">
+	    <iframe src="https://player.vimeo.com/video/169993072" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	  </div>
+	  <button class="close-button" data-close aria-label="Close modal" type="button">
+	    <span aria-hidden="true">&times;</span>
+	  </button>
+	</div>
 	<div class="row content">
 	  <div class="large-12 columns">
 	    <img class="appear 1" src="/img/logo.png" alt="Logo SPA">
@@ -42,7 +50,7 @@ title: "La SPA : N'abandonnez jamais"
 		<a href="https://soutenir.la-spa.fr/?cid=125" title="Je fais un don" class="button" target="_blank">Je soutiens la SPA</a>
 		<a href="#compte" title="Je crée mon équipe" class="button compte-anchor">Je crée mon équipe</a>
 	      </div>
-	      <a class="video" href="TODO" title="Vidéo">Voir la vidéo complète</a>
+	      <a class="video" data-open="modalVideoFullscreen" title="Vidéo">Voir la vidéo complète</a>
 	      <div class="button-group share">
 		<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://khaki-elderberry.cloudvent.net" title="Partage facebook"><img src="/img/fb.png" alt="Facebook"></a>
 		<a target="_blank" href="https://twitter.com/home?status=N%27abandonnez%20jamais.%20Contre%20l%27abandon%2C%20pariez%20sur%20la%20SPA%20%23nabandonnezjamais" title="Partage twitter"><img src="/img/twitter.png" alt="Twitter"></a>
