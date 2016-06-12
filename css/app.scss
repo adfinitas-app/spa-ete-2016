@@ -3,6 +3,38 @@
 
 @import 'global';
 
+/* Trick to have a fixed position for the off-canvas */
+/* You have to put your content in a <article> tag */
+
+article,
+body,
+html,
+.off-canvas-wrapper,
+.off-canvas-wrapper-inner,
+.off-canvas,
+.off-canvas-content,
+.row {
+  height: 100%;
+  width: 100%;
+}
+
+article {
+  overflow-y: auto;
+}
+
+/* End of trick */
+
+.title-bar {
+  .button {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 5px;
+  }
+  .menu-icon {
+    margin-top: 12px;
+  }
+}
+
 /* Background video */
 .header {
   width: 100%;
@@ -225,7 +257,7 @@ section.don {
 }
 
 section.stadium {
-  padding-top: 80px;
+  padding-top: 50px;
   padding-bottom: 180px;
   background-image: url("/img/stadium-dog.png"), url("/img/stadium-bg.jpg");
   background-size: auto, cover;

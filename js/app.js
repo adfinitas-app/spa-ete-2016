@@ -3,53 +3,53 @@ $(document).ready(launch);
 
 function part1(e) {
   e.preventDefault();
-  $('html, body').animate({
+  $('#mainContent').animate({
     scrollTop: 0
   }, 1000);
 }
 function part2(e) {
   e.preventDefault();
-  var size = $("#stories").offset().top;
+  var size = $("#stories").offset().top + $("#mainContent").scrollTop();
   if ($('.navbar').hasClass('sticky') == false) {
     size -= (navSize + 5);
   }
-  $('html, body').animate({
+  $('#mainContent').animate({
     scrollTop: size
   }, 1000);
 }
 function part3(e) {
   e.preventDefault();
   var size;
-  var size = $("#compte").offset().top - navSize;
+  var size = $("#compte").offset().top  + $("#mainContent").scrollTop() - navSize;
   if ($('.navbar').hasClass('sticky') == false) {
     size -= navSize;
   }
-  $('html, body').animate({
+  $('#mainContent').animate({
     scrollTop: size
   }, 1000);
 }
 function part4(e) {
   e.preventDefault();
-  var size = $("#numbers").offset().top - navSize;
+  var size = $("#numbers").offset().top  + $("#mainContent").scrollTop() - navSize;
   if ($('.navbar').hasClass('sticky') == false) {
     size -= navSize;
   }
-  $('html, body').animate({
+  $('#mainContent').animate({
     scrollTop: size
   }, 1000);
 }
 function partDon(e) {
   e.preventDefault();
-  var size = $("#don").offset().top - navSize;
+  var size = $("#don").offset().top  + $("#mainContent").scrollTop() - navSize;
   if ($('.navbar').hasClass('sticky') == false) {
     size -= navSize;
   }
-  $('html, body').animate({
+  $('#mainContent').animate({
     scrollTop: size
   }, 1000);
 }
 function launchAnchors() {
-  $("#top-anchor").on("click", part1)
+  $(".top-anchor").on("click", part1)
   $(".stories-anchor").on("click", part2)
   $(".compte-anchor").on("click", part3)
   $(".numbers-anchor").on("click", part4)
@@ -62,18 +62,18 @@ function launchAnchors() {
 var stickyNavTop;
 function sticky() {
   function stickyNav() {
-    if ($(window).scrollTop() >= stickyNavTop) {
+    if ($("#mainContent").scrollTop() >= stickyNavTop) {
       $('.navbar').addClass('sticky');
     } else {
       $('.navbar').removeClass('sticky');
     }
   };
   stickyNav();
-  $(window).on("scroll", stickyNav);
+  $("#mainContent").on("scroll", stickyNav);
 }
 function resetSticky() {
   $('.navbar').removeClass('sticky');
-  $(window).off("scroll");
+  $("#mainContent").off("scroll");
   stickyNavTop = $('.navbar').offset().top;
   sticky();
 }

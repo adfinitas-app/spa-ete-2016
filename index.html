@@ -3,357 +3,367 @@ layout : default
 title: "La SPA : N'abandonnez jamais"
 ---
 
-<div class="title-bar show-for-small-only ">
-  <div class="title-bar-left">
-    <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
-    <!--<span class="title-bar-title">Foundation</span>-->
+<div data-sticky-container>
+  <div class="title-bar show-for-small-only" data-sticky data-options="marginTop:0;">
+    <div class="title-bar-left">
+      <button class="menu-icon" type="button" data-toggle="offCanvas"></button>
+    </div>
+    <div class="title-bar-right">
+      <a class="button" href="https://soutenir.la-spa.fr/?cid=125" target="_blank">Je fais un don</a>
+    </div>
   </div>
 </div>
 <div class="off-canvas-wrapper">
   <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
     <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
 
-      <!-- Menu -->
-      <ul class="vertical menu">
-	<li><a href="#top">Jim en vidéo</a></li>
-	<li><a href="#stories">Victoires</a></li>
-	<li><a href="#compte">A vous de jouer</a></li>
-	<li><a href="#numbers">La SPA en chiffres</a></li>
-      </ul>
+      <div data-sticky-container>
+	<!-- Menu -->
+	<ul class="vertical menu" data-sticky>
+	  <li><a href="#top">Jim en vidéo</a></li>
+	  <li><a href="#stories">Victoires</a></li>
+	  <li><a href="#compte">A vous de jouer</a></li>
+	  <li><a href="#numbers">La SPA en chiffres</a></li>
+	</ul>
 
+      </div>
     </div>
 
     <div class="off-canvas-content" data-off-canvas-content>
       <!-- Page content -->
-      <section class="header fullscreen-bg covervideo-wrapper">
-	<div class="large reveal" id="modalVideoFullscreen" data-reveal>
-	  <div class="flex-video">
-	    <iframe src="https://player.vimeo.com/video/169993072" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <article id="mainContent">
+	<section class="header fullscreen-bg covervideo-wrapper">
+	  <div class="large reveal" id="modalVideoFullscreen" data-reveal>
+	    <div class="flex-video">
+	      <iframe src="https://player.vimeo.com/video/169993072" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+	    </div>
+	    <button class="close-button" data-close aria-label="Close modal" type="button">
+	      <span aria-hidden="true">&times;</span>
+	    </button>
 	  </div>
-	  <button class="close-button" data-close aria-label="Close modal" type="button">
-	    <span aria-hidden="true">&times;</span>
-	  </button>
-	</div>
-	<div class="row content">
-	  <div class="large-12 columns">
-	    <img class="appear 1" src="/img/logo.png" alt="Logo SPA">
-	    <h1 class="appear 2">N'abandonnez jamais</h1>
-	    <div class="appear 3">
-	      <p class="subtitle">Contre l'abandon, pariez sur la SPA</p>
-	      <p class="pitch">
-	      Cet été, ils seront 60 000 à être abandonnés.<br />
-	      Ensemble, soyons là pour eux !
+	  <div class="row content">
+	    <div class="large-12 columns">
+	      <img class="appear 1" src="/img/logo.png" alt="Logo SPA">
+	      <h1 class="appear 2">N'abandonnez jamais</h1>
+	      <div class="appear 3">
+		<p class="subtitle">Contre l'abandon, pariez sur la SPA</p>
+		<p class="pitch">
+		Cet été, ils seront 60 000 à être abandonnés.<br />
+		Ensemble, soyons là pour eux !
+		</p>
+	      </div>
+	      <div class="appear 4">
+		<div class="button-group">
+		  <a href="https://soutenir.la-spa.fr/?cid=125" title="Je fais un don" class="button" target="_blank">Je soutiens la SPA</a>
+		  <a href="#compte" title="Je crée mon équipe" class="button compte-anchor">Je crée mon équipe</a>
+		</div>
+		<a class="video" data-open="modalVideoFullscreen" title="Vidéo">Voir la vidéo complète</a>
+		<div class="button-group share">
+		  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://khaki-elderberry.cloudvent.net" title="Partage facebook"><img src="/img/fb.png" alt="Facebook"></a>
+		  <a target="_blank" href="https://twitter.com/home?status=N%27abandonnez%20jamais.%20Contre%20l%27abandon%2C%20pariez%20sur%20la%20SPA%20%23nabandonnezjamais" title="Partage twitter"><img src="/img/twitter.png" alt="Twitter"></a>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	  <video class="covervideo" autoplay loop>
+	    <source src="/video/spa.mp4" type="video/mp4">
+	      Your browser does not support the video tag.
+	  </video>
+	</section>
+	<section class="navbar hide-for-small-only">
+	  <div class="container">
+	    <div class="row">
+	      <div class="large-12 columns">
+		<div class="left">
+		  <a class="link" href="http://la-spa.fr" title="La SPA"><img class="logo" src="/img/logo.png" alt="Logo"></a>
+		  <a class="link top-anchor" href="#top" title="Vidéo">Jim en vidéo</a>
+		  <a class="link stories-anchor" href="#stories" title="Victoires">Victoires</a>
+		  <a class="link compte-anchor" href="#compte" title="TeamForPets">A vous de jouer</a>
+		  <a class="link numbers-anchor" href="#numbers" title="Chiffres">La SPA en chiffres</a>
+		</div>
+		<div class="right">
+		  <a class="button" href="https://soutenir.la-spa.fr/?cid=125" title="Je fais un don" target="_blank">Je fais un don</a>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	  <div class="shadow-top"></div>
+	</section>
+	<section class="histoires" id="stories">
+	  <div class="row">
+	    <div class="large-12 columns">
+	      <h1>Eux aussi malgré les épreuves,<br />ils sont sortis vainqueurs de l’abandon grâce à la spa</h1>
+	    </div>
+	  </div>
+	  <div class="histoires-bloc">
+	    <div class="row">
+	      <div class="large-12 columns">
+		<div class="animal">
+		  <div class="container initial-story">
+		    <img src="/img/histoire-1.jpg" alt="Roudy">
+		    <p class="name-title name-text">Roudy</p>
+		  </div><!--
+		  --><div class="container hover-story">
+		    <div class="small-container">
+		      <img src="/img/histoire-1-avant.jpg" alt="Roudy Avant">
+		      <p class="name-title avant-apres">Avant</p>
+		    </div><!--
+		    --><div class="small-container">
+		      <img src="/img/histoire-1-apres.jpg" alt="Roudy Apres">
+		      <p class="name-title avant-apres">Après</p>
+		    </div>
+		    <div class="text">
+		      <p class="name-text smallest">Roudy, champion de la gentillesse</p>
+		      <p>
+		      Quand nous l’avons recueilli, Roudy était traumatisé. Mais les souffrances qui lui ont été infligées n’ont pas eu raison de sa gentillesse !
+		      </p>
+		    </div>
+		  </div>
+		</div><!--
+		--><div class="animal">
+		  <div class="container initial-story">
+		    <img src="/img/histoire-2.jpg" alt="Aina">
+		    <p class="name-title name-text">Aina</p>
+		  </div><!--
+		  --><div class="container hover-story">
+		    <img src="/img/histoire-2-avant.jpg" alt="Aina Avant"><!--
+		    --><img src="/img/histoire-2-apres.jpg" alt="Aina Apres">
+		    <div class="text">
+		      <p class="name-text">Le courage d’Aïna</p>
+		      <p>
+		      Maigreur extrême, tumeurs, patte fracturée… C’est avec courage qu’Aïna a combattu les conséquences de son abandon.
+		      </p>
+		    </div>
+		  </div>
+		</div><!--
+		--><div class="animal">
+		  <div class="container initial-story">
+		    <img src="/img/histoire-3.jpg" alt="Flocky">
+		    <p class="name-title name-text">Flocky</p>
+		  </div><!--
+		  --><div class="container hover-story">
+		    <img src="/img/histoire-3-avant.jpg" alt="Flocky Avant"><!--
+		    --><img src="/img/histoire-3-apres.jpg" alt="Flocky Apres">
+		    <div class="text smallest">
+		      <p class="name-text">Flocky peut crier victoire !</p>
+		      <p>
+		      Abonné plusieurs fois, Flocky était devenu très craintif… Bien qu’habitué à l’équipe de notre refuge, il courrait se cacher dès qu’un inconnu arrivait. Jusqu’à ce qu’il croise sa nouvelle maîtresse : une élève vétérinaire qui a su lui redonner confiance.
+		      </p>
+		    </div>
+		  </div>
+		</div>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	<section class="don" id="don">
+	  <div class="row">
+	    <div class="large-12 columns">
+	      <h1>votre don,<br />
+		une victoire contre l’abandon</h1>
+	      <img class="fleche" src="/img/fleche.png" alt="Fleche">
+	    </div>
+	  </div>
+	  <div class="row medium-collapse">
+	    <div class="large-4 columns">
+	      <div class="container">
+		<a class="bloc-don" href="https://soutenir.la-spa.fr/?cid=125&amount=4500" title="Je donne 45€">
+		  <div class="don-orange">
+		    <p class="title">
+		    <img src="/img/fleche-blanche.png" alt="Fleche">
+		    Je donne 45€
+		    </p>
+		    <p class="subtitle">(15,30 € après  déduction fiscale)</p>
+		  </div>
+		  <img src="/img/don-1.jpg" alt="Don">
+		</a>
+		<p class="sub-block">Pour accueillir, nourrir, et soigner<br />
+		un chien comme Roudy pendant 1 mois</p>
+	      </div>
+	    </div>
+	    <div class="large-4 columns">
+	      <div class="container">
+		<a class="bloc-don" href="https://soutenir.la-spa.fr/?cid=125&amount=6000" title="Je donne 60€">
+		  <div class="don-orange">
+		    <p class="title">
+		    <img src="/img/fleche-blanche.png" alt="Fleche">
+		    Je donne 60€
+		    </p>
+		    <p class="subtitle">(20,40 € après  déduction fiscale)</p>
+		  </div>
+		  <img src="/img/don-2.jpg" alt="Don">
+		</a>
+		<p class="sub-block">Pour soigner régulièrement <br />
+		un chien pendant 3 mois</p>
+	      </div>
+	    </div>
+	    <div class="large-4 columns">
+	      <div class="container">
+		<a class="bloc-don" href="https://soutenir.la-spa.fr/?cid=125&amount=12000" title="Je donne 120€">
+		  <div class="don-orange">
+		    <p class="title">
+		    <img src="/img/fleche-blanche.png" alt="Fleche">
+		    Je donne 120€
+		    </p>
+		    <p class="subtitle">(40,80 € après  déduction fiscale)</p>
+		  </div>
+		  <img src="/img/don-3.jpg" alt="Don">
+		</a>
+		<p class="sub-block">Pour fournir tous les soins à <br />
+		un animal comme Aïna</p>
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	<section class="stadium" id="compte">
+	  <div class="row">
+	    <div class="large-12 columns">
+	      <p class="top-text">Pariez sur la SPA <br />avec</p>
+	      <img class="pet-click" src="/img/pet-click.png" alt="Pet Click">
+	      <p class="a-vous">A vous de jouer</p>
+	      <p class="a-vous-desc">Créez votre propre équipe contre l'abandon
+	      aux couleurs de la SPA et faites la gagner !</p>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="large-12 columns show-for-medium-up">
+	      <canvas id="canvas" width="920" height="200"></canvas>
+	    </div>
+	  </div>
+	  <div class="row show-for-small-only steps">
+	    <div class="small-12 columns">
+	      <img src="/img/etape-1.png" alt="Créez votre page de collecte">
+	    </div>
+	    <div class="small-12 columns">
+	      <img src="/img/etape-2.png" alt="Choisissez votre animal mascotte et donnez un nom à votre équipe">
+	    </div>
+	    <div class="small-12 columns">
+	      <img src="/img/etape-3.png" alt="Invitez vos amis à collectionner pour votre équipe">
+	    </div>
+	    <div class="small-12 columns">
+	      <img src="/img/etape-4.png" alt="Tentez de gagner de nombreux lots">
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="large-12 columns">
+	      <a class="button equip" href="http://collecte.la-spa.fr" title="TeamForPets">Je crée mon équipe</a>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="medium-5 columns medium-centered">
+	      <p class="explic">
+	      Un ami qui fait un don c’est un coéquipier en plus
+	      dans la grande équipe de la SPA.
 	      </p>
 	    </div>
-	    <div class="appear 4">
-	      <div class="button-group">
-		<a href="https://soutenir.la-spa.fr/?cid=125" title="Je fais un don" class="button" target="_blank">Je soutiens la SPA</a>
-		<a href="#compte" title="Je crée mon équipe" class="button compte-anchor">Je crée mon équipe</a>
-	      </div>
-	      <a class="video" data-open="modalVideoFullscreen" title="Vidéo">Voir la vidéo complète</a>
+	  </div>
+	  <div class="row">
+	    <div class="medium-7 columns medium-centered">
+	      <p class="explic">Cette année encore, de nombreux animaux comme Roudy ou Aïna seront abandonnés, et afin de leur apporter de la nourriture, un toit, des soins, nous comptons sur vous !
+	      </p>
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="large-12 columns">
 	      <div class="button-group share">
 		<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://khaki-elderberry.cloudvent.net" title="Partage facebook"><img src="/img/fb.png" alt="Facebook"></a>
-		<a target="_blank" href="https://twitter.com/home?status=N%27abandonnez%20jamais.%20Contre%20l%27abandon%2C%20pariez%20sur%20la%20SPA%20%23nabandonnezjamais" title="Partage twitter"><img src="/img/twitter.png" alt="Twitter"></a>
+		<a href="https://twitter.com/home?status=N%27abandonnez%20jamais.%20Contre%20l%27abandon%2C%20pariez%20sur%20la%20SPA%20%23nabandonnezjamais" title="Partage twitter"><img src="/img/twitter.png" target="_blank" alt="Twitter"></a>
 	      </div>
 	    </div>
 	  </div>
-	</div>
-	<video class="covervideo" autoplay loop>
-	  <source src="/video/spa.mp4" type="video/mp4">
-	    Your browser does not support the video tag.
-	</video>
-      </section>
-      <section class="navbar hide-for-small-only">
-	<div class="container">
-	  <div class="row">
+	</section>
+	<section class="chiffres" id="numbers">
+	  <div class="row header">
 	    <div class="large-12 columns">
-	      <div class="left">
-		<a class="link" href="http://la-spa.fr" title="La SPA"><img class="logo" src="/img/logo.png" alt="Logo"></a>
-		<a class="link top-anchor" href="#top" title="Vidéo">Jim en vidéo</a>
-		<a class="link stories-anchor" href="#stories" title="Victoires">Victoires</a>
-		<a class="link compte-anchor" href="#compte" title="TeamForPets">A vous de jouer</a>
-		<a class="link numbers-anchor" href="#numbers" title="Chiffres">La SPA en chiffres</a>
+	      <h1 class="title">La SPA, <br />championne de la lutte contre l'abandon.</h1>
+	      <p class="subtitle">Soutenez la SPA pour offrir aux animaux abandonnés :</p>
+	    </div>
+	  </div>
+	  <div class="row bloc">
+	    <div class="medium-4 columns">
+	      <div class="container">
+		<p class="title">Un toit</p>
+		<img class="img-chiffres" src="img/chiffres-1.png" alt="Un toit">
+		<p class="accroche">46 015 <span class="smaller">animaux recueillis</span></p>
+		<p class="accroche-end">dans 62 refuges et Maison SPA</p>
 	      </div>
-	      <div class="right">
-		<a class="button" href="https://soutenir.la-spa.fr/?cid=125" title="Je fais un don">Je fais un don</a>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-	<div class="shadow-top"></div>
-      </section>
-      <section class="histoires" id="stories">
-	<div class="row">
-	  <div class="large-12 columns">
-	    <h1>Eux aussi malgré les épreuves,<br />ils sont sortis vainqueurs de l’abandon grâce à la spa</h1>
-	  </div>
-	</div>
-	<div class="histoires-bloc">
-	  <div class="row">
-	    <div class="large-12 columns">
-	      <div class="animal">
-		<div class="container initial-story">
-		  <img src="/img/histoire-1.jpg" alt="Roudy">
-		  <p class="name-title name-text">Roudy</p>
-		</div><!--
-		--><div class="container hover-story">
-		  <div class="small-container">
-		    <img src="/img/histoire-1-avant.jpg" alt="Roudy Avant">
-		    <p class="name-title avant-apres">Avant</p>
-		  </div><!--
-		  --><div class="small-container">
-		    <img src="/img/histoire-1-apres.jpg" alt="Roudy Apres">
-		    <p class="name-title avant-apres">Après</p>
-		  </div>
-		  <div class="text">
-		    <p class="name-text smallest">Roudy, champion de la gentillesse</p>
-		    <p>
-		    Quand nous l’avons recueilli, Roudy était traumatisé. Mais les souffrances qui lui ont été infligées n’ont pas eu raison de sa gentillesse !
-		    </p>
-		  </div>
-		</div>
-	      </div><!--
-	      --><div class="animal">
-		<div class="container initial-story">
-		  <img src="/img/histoire-2.jpg" alt="Aina">
-		  <p class="name-title name-text">Aina</p>
-		</div><!--
-		--><div class="container hover-story">
-		  <img src="/img/histoire-2-avant.jpg" alt="Aina Avant"><!--
-		  --><img src="/img/histoire-2-apres.jpg" alt="Aina Apres">
-		  <div class="text">
-		    <p class="name-text">Le courage d’Aïna</p>
-		    <p>
-		    Maigreur extrême, tumeurs, patte fracturée… C’est avec courage qu’Aïna a combattu les conséquences de son abandon.
-		    </p>
-		  </div>
-		</div>
-	      </div><!--
-	      --><div class="animal">
-		<div class="container initial-story">
-		  <img src="/img/histoire-3.jpg" alt="Flocky">
-		  <p class="name-title name-text">Flocky</p>
-		</div><!--
-		--><div class="container hover-story">
-		  <img src="/img/histoire-3-avant.jpg" alt="Flocky Avant"><!--
-		  --><img src="/img/histoire-3-apres.jpg" alt="Flocky Apres">
-		  <div class="text smallest">
-		    <p class="name-text">Flocky peut crier victoire !</p>
-		    <p>
-		    Abonné plusieurs fois, Flocky était devenu très craintif… Bien qu’habitué à l’équipe de notre refuge, il courrait se cacher dès qu’un inconnu arrivait. Jusqu’à ce qu’il croise sa nouvelle maîtresse : une élève vétérinaire qui a su lui redonner confiance.
-		    </p>
-		  </div>
-		</div>
-	      </div>
-	    </div>
-	  </div>
-	</div>
-      </section>
-      <section class="don" id="don">
-	<div class="row">
-	  <div class="large-12 columns">
-	    <h1>votre don,<br />
-	      une victoire contre l’abandon</h1>
-	    <img class="fleche" src="/img/fleche.png" alt="Fleche">
-	  </div>
-	</div>
-	<div class="row medium-collapse">
-	  <div class="large-4 columns">
-	    <div class="container">
-	      <a class="bloc-don" href="https://soutenir.la-spa.fr/?cid=125&amount=4500" title="Je donne 45€">
-		<div class="don-orange">
-		  <p class="title">
-		  <img src="/img/fleche-blanche.png" alt="Fleche">
-		  Je donne 45€
-		  </p>
-		  <p class="subtitle">(15,30 € après  déduction fiscale)</p>
-		</div>
-		<img src="/img/don-1.jpg" alt="Don">
-	      </a>
-	      <p class="sub-block">Pour accueillir, nourrir, et soigner<br />
-	      un chien comme Roudy pendant 1 mois</p>
-	    </div>
-	  </div>
-	  <div class="large-4 columns">
-	    <div class="container">
-	      <a class="bloc-don" href="https://soutenir.la-spa.fr/?cid=125&amount=6000" title="Je donne 60€">
-		<div class="don-orange">
-		  <p class="title">
-		  <img src="/img/fleche-blanche.png" alt="Fleche">
-		  Je donne 60€
-		  </p>
-		  <p class="subtitle">(20,40 € après  déduction fiscale)</p>
-		</div>
-		<img src="/img/don-2.jpg" alt="Don">
-	      </a>
-	      <p class="sub-block">Pour soigner régulièrement <br />
-	      un chien pendant 3 mois</p>
-	    </div>
-	  </div>
-	  <div class="large-4 columns">
-	    <div class="container">
-	      <a class="bloc-don" href="https://soutenir.la-spa.fr/?cid=125&amount=12000" title="Je donne 120€">
-		<div class="don-orange">
-		  <p class="title">
-		  <img src="/img/fleche-blanche.png" alt="Fleche">
-		  Je donne 120€
-		  </p>
-		  <p class="subtitle">(40,80 € après  déduction fiscale)</p>
-		</div>
-		<img src="/img/don-3.jpg" alt="Don">
-	      </a>
-	      <p class="sub-block">Pour fournir tous les soins à <br />
-	      un animal comme Aïna</p>
-	    </div>
-	  </div>
-	</div>
-      </section>
-      <section class="stadium" id="compte">
-	<div class="row">
-	  <div class="large-12 columns">
-	    <p class="top-text">Pariez sur la SPA <br />avec</p>
-	    <img class="pet-click" src="/img/pet-click.png" alt="Pet Click">
-	    <p class="a-vous">A vous de jouer</p>
-	    <p class="a-vous-desc">Créez votre propre équipe contre l'abandon
-	    aux couleurs de la SPA et faites la gagner !</p>
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns show-for-medium-up">
-	    <canvas id="canvas" width="920" height="200"></canvas>
-	  </div>
-	</div>
-	<div class="row show-for-small-only steps">
-	  <div class="small-12 columns">
-	    <img src="/img/etape-1.png" alt="Créez votre page de collecte">
-	  </div>
-	  <div class="small-12 columns">
-	    <img src="/img/etape-2.png" alt="Choisissez votre animal mascotte et donnez un nom à votre équipe">
-	  </div>
-	  <div class="small-12 columns">
-	    <img src="/img/etape-3.png" alt="Invitez vos amis à collectionner pour votre équipe">
-	  </div>
-	  <div class="small-12 columns">
-	    <img src="/img/etape-4.png" alt="Tentez de gagner de nombreux lots">
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <a class="button equip" href="http://collecte.la-spa.fr" title="TeamForPets">Je crée mon équipe</a>
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="medium-5 columns medium-centered">
-	    <p class="explic">
-	    Un ami qui fait un don c’est un coéquipier en plus
-	    dans la grande équipe de la SPA.
-	    </p>
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="medium-7 columns medium-centered">
-	    <p class="explic">Cette année encore, de nombreux animaux comme Roudy ou Aïna seront abandonnés, et afin de leur apporter de la nourriture, un toit, des soins, nous comptons sur vous !
-	    </p>
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <div class="button-group share">
-	      <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://khaki-elderberry.cloudvent.net" title="Partage facebook"><img src="/img/fb.png" alt="Facebook"></a>
-	      <a href="https://twitter.com/home?status=N%27abandonnez%20jamais.%20Contre%20l%27abandon%2C%20pariez%20sur%20la%20SPA%20%23nabandonnezjamais" title="Partage twitter"><img src="/img/twitter.png" target="_blank" alt="Twitter"></a>
-	    </div>
-	  </div>
-	</div>
-      </section>
-      <section class="chiffres" id="numbers">
-	<div class="row header">
-	  <div class="large-12 columns">
-	    <h1 class="title">La SPA, <br />championne de la lutte contre l'abandon.</h1>
-	    <p class="subtitle">Soutenez la SPA pour offrir aux animaux abandonnés :</p>
-	  </div>
-	</div>
-	<div class="row bloc">
-	  <div class="medium-4 columns">
-	    <div class="container">
-	      <p class="title">Un toit</p>
-	      <img class="img-chiffres" src="img/chiffres-1.png" alt="Un toit">
-	      <p class="accroche">46 015 <span class="smaller">animaux recueillis</span></p>
-	      <p class="accroche-end">dans 62 refuges et Maison SPA</p>
-	    </div>
-	  </div>
-	  <div class="medium-4 columns">
-	    <div class="container">
-	      <p class="title">Des soins</p>
-	      <img class="img-chiffres" src="img/chiffres-2.png" alt="Un toit">
-	      <p class="accroche">130 000 <span class="smaller">animaux soignés</span></p>
-	      <p class="accroche-end">dans 12 dispensaires</p>
-	    </div>
-	  </div>
-	  <div class="medium-4 columns">
-	    <p class="title">Une nouvelle vie</p>
-	    <div class="container">
-	      <img class="img-chiffres" src="img/chiffres-3.png" alt="Une nouvelle vie">
-	      <p class="accroche">38 311 <span class="smaller">animaux adoptés</span></p>
-	      <p class="accroche-end">(18 735 chiens et 19 576 chats)</p>
-	    </div>
-	  </div>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <p class="source">source: chiffre 2015</p>
-	  </div>
-	</div>
-	<div class="row medium-collapse">
-	  <div class="medium-6 medium-centered">
-	    <div class="medium-8 columns">
-	      <p class="allo-text">Face à la recrudescence d'animaux perdus ou abandonnés durant l'été, pour la seconde année, la SPA met à disposition un numéro d'appel d'urgence.</p>
 	    </div>
 	    <div class="medium-4 columns">
-	      <img src="/img/allo.png">
+	      <div class="container">
+		<p class="title">Des soins</p>
+		<img class="img-chiffres" src="img/chiffres-2.png" alt="Un toit">
+		<p class="accroche">130 000 <span class="smaller">animaux soignés</span></p>
+		<p class="accroche-end">dans 12 dispensaires</p>
+	      </div>
+	    </div>
+	    <div class="medium-4 columns">
+	      <p class="title">Une nouvelle vie</p>
+	      <div class="container">
+		<img class="img-chiffres" src="img/chiffres-3.png" alt="Une nouvelle vie">
+		<p class="accroche">38 311 <span class="smaller">animaux adoptés</span></p>
+		<p class="accroche-end">(18 735 chiens et 19 576 chats)</p>
+	      </div>
 	    </div>
 	  </div>
-	</div>
-      </section>
-      <section class="footer">
-	<div class="reveal" id="modal1" data-reveal>
-	  <p>
-	  Société Protectrice des Animaux<br />
-	  39, boulevard Berthier<br />
-	  75847 PARIS Cedex 17<br />
-	  <b>Tél :</b> 01 43 80 40 66<br />
-	  <b>Fax :</b>  01 49 80 99 23<br />
-	  <b>Email :</b>  info@la-spa.fr<br />
-	  <b>Directeur de la publication :</b>  Géraldine BARRAL<br />
-	  <b>Hébergement :</b>  OVH<br />
-	  <b>Hébergement</b><br />
-	  adfinitas SARL au capital de 50 000 € - RCS Roubaix - Tourcoing B 432 326 601 - Siège social : 87 rue du Molinel, Batiment A, 59700 Marcq-en-Baroeul, France.<br />
-	  <br />
-	  <b>Attention : La responsabilité de la Société Protectrice des Animaux et de son prestataire Web, quant à l'utilisation ou l'interprétation par l'internaute des informations et outils diffusés sur son site, ne pourra en aucun cas être engagée.</b>
-	  </p>
-	  <button class="close-button" data-close aria-label="Close modal" type="button">
-	    <span aria-hidden="true">&times;</span>
-	  </button>
-	</div>
-	<div class="row">
-	  <div class="large-12 columns">
-	    <img class="logo" src="/img/logo.png">
-	    <div class="links">
-	      <p>© 2016 SPA</p>
-	      |
-	      <a title="Mentions légales" data-open="modal1">MENTIONS LEGALES</a>
-	      |
-	      <a href="https://la-spa.fr/contact" title="Contact">CONTACT</a>
+	  <div class="row">
+	    <div class="large-12 columns">
+	      <p class="source">source: chiffre 2015</p>
 	    </div>
-	    <div class="share">
-	      <a href="https://www.facebook.com/SPAofficiel" title="Facebook"><img src="/img/footer-fb.png" alt="Facebook"></a>
-	      <a href="https://twitter.com/spa_officiel" title="Twitter"><img src="/img/footer-twitter.png" alt="Twitter"></a>
-	      <a href="https://instagram.com/la_spa/" title="Instagram"><img src="/img/footer-instagram.png" alt="Instagram"></a>
-	      <a href="https://www.youtube.com/user/LaSPAofficiel" title="Youtube"><img src="/img/footer-youtube.png" alt="Youtube"></a>
-	    </div>
-	    <a class="don-en-confiance"href="https://la-spa.fr/la-rigueur-et-la-transparence-de-gestion-de-la-spa-labellisees-par-le-comite-de-la-charte" title="Don en confiance"><img src="/img/don-en-confiance.png" alt="Don en confiance"></a>
 	  </div>
-	</div>
-      </section>
+	  <div class="row medium-collapse">
+	    <div class="medium-6 medium-centered">
+	      <div class="medium-8 columns">
+		<p class="allo-text">Face à la recrudescence d'animaux perdus ou abandonnés durant l'été, pour la seconde année, la SPA met à disposition un numéro d'appel d'urgence.</p>
+	      </div>
+	      <div class="medium-4 columns">
+		<img src="/img/allo.png">
+	      </div>
+	    </div>
+	  </div>
+	</section>
+	<section class="footer">
+	  <div class="reveal" id="modal1" data-reveal>
+	    <p>
+	    <b>Société Protectrice des Animaux</b><br />
+	    39, boulevard Berthier<br />
+	    75847 PARIS Cedex 17<br />
+	    <b>Tél :</b> 01 43 80 40 66<br />
+	    <b>Fax :</b>  01 49 80 99 23<br />
+	    <b>Email :</b>  info@la-spa.fr<br />
+	    <b>Directeur de la publication :</b>  Géraldine BARRAL<br />
+	    <b>Hébergement :</b>  OVH<br />
+	    <br />
+	    <b>Hébergement</b><br />
+	    <ul>
+	      <li>adfinitas SARL au capital de 50 000 € - RCS Roubaix - Tourcoing B 432 326 601 - Siège social : 87 rue du Molinel, Batiment A, 59700 Marcq-en-Baroeul, France.</li>
+	    </ul>
+	    <b>Attention : La responsabilité de la Société Protectrice des Animaux et de son prestataire Web, quant à l'utilisation ou l'interprétation par l'internaute des informations et outils diffusés sur son site, ne pourra en aucun cas être engagée.</b>
+	    </p>
+	    <button class="close-button" data-close aria-label="Close modal" type="button">
+	      <span aria-hidden="true">&times;</span>
+	    </button>
+	  </div>
+	  <div class="row">
+	    <div class="large-12 columns">
+	      <img class="logo" src="/img/logo.png">
+	      <div class="links">
+		<p>© 2016 SPA</p>
+		|
+		<a title="Mentions légales" data-open="modal1">MENTIONS LEGALES</a>
+		|
+		<a href="https://la-spa.fr/contact" title="Contact">CONTACT</a>
+	      </div>
+	      <div class="share">
+		<a href="https://www.facebook.com/SPAofficiel" title="Facebook"><img src="/img/footer-fb.png" alt="Facebook"></a>
+		<a href="https://twitter.com/spa_officiel" title="Twitter"><img src="/img/footer-twitter.png" alt="Twitter"></a>
+		<a href="https://instagram.com/la_spa/" title="Instagram"><img src="/img/footer-instagram.png" alt="Instagram"></a>
+		<a href="https://www.youtube.com/user/LaSPAofficiel" title="Youtube"><img src="/img/footer-youtube.png" alt="Youtube"></a>
+	      </div>
+	      <a class="don-en-confiance"href="https://la-spa.fr/la-rigueur-et-la-transparence-de-gestion-de-la-spa-labellisees-par-le-comite-de-la-charte" title="Don en confiance"><img src="/img/don-en-confiance.png" alt="Don en confiance"></a>
+	    </div>
+	  </div>
+	</section>
+      </article>
     </div>
   </div>
 </div>
