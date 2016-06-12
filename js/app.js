@@ -78,6 +78,17 @@ function resetSticky() {
   sticky();
 }
 
+function launchHeaderAppear() {
+  $(".appear.1").fadeTo(800, 1, function() {
+    $(".appear.2").fadeTo(800, 1, function() {
+      $(".appear.3").fadeTo(800, 1, function() {
+	$(".appear.4").fadeTo(800, 1, function() {
+	});
+      });
+    });
+  });
+}
+
 var canvas, stage, exportRoot;
 function launchAnim() {
   // --- write your JS code here ---
@@ -98,10 +109,11 @@ function launch() {
   navSize = $(".navbar .container").outerHeight();
   navSize = 110;
   storyHover();
-  //videoHide();
   launchAnim();
   launchAnchors();
   sticky();
+  launchHeaderAppear();
+  $('.covervideo').coverVid(640, 360);
 }
 
 function storyHover() {
@@ -112,13 +124,5 @@ function storyHover() {
   $(".histoires-bloc .animal").on("mouseleave", function() {
     $(this).find(".initial-story").css("display", "inline-block");
     $(this).find(".hover-story").css("display", "none");
-  });
-}
-
-function videoHide() {
-  $(".header video").on("ended", function() {
-    $(".header video").slideUp();
-    $(".header .content").slideDown();
-    resetSticky();
   });
 }
