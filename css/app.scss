@@ -111,6 +111,11 @@ section.header {
     padding-bottom: 75px;
     /*display: none;*/
   }
+  h1 {
+    @media only screen and (max-width: 40em) {
+      font-size: 70px;
+    }
+  }
   .subtitle {
     text-transform: uppercase;
     font-weight: bold;

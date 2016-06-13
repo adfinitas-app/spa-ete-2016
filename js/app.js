@@ -113,7 +113,7 @@ function launch() {
   launchAnchors();
   sticky();
   launchHeaderAppear();
-  $('.covervideo').coverVid(640, 360);
+  $('.covervideo').coverVid(1920, 910);
 }
 
 function storyHover() {
