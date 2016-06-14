@@ -49,7 +49,7 @@ function partDon(e) {
   }, 1000);
 }
 function launchAnchors() {
-  $(".top-anchor").on("click", part1)
+  //$(".top-anchor").on("click", part1)
   $(".stories-anchor").on("click", part2)
   $(".compte-anchor").on("click", part3)
   $(".numbers-anchor").on("click", part4)
