@@ -278,9 +278,10 @@ section.stadium {
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
   @media only screen and (max-width: 1000px) {
-    background-size: auto, auto;
-    background-attachment: scroll;
     padding-bottom: 20px;
+    background-size: auto, cover;
+    background-position: 100% 20%, 50%;
+    background-attachment: scroll;
   }
   color: white;
 
