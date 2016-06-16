@@ -114,6 +114,9 @@ section.header {
   .content {
     padding-top: 140px;
     padding-bottom: 75px;
+    @media only screen and (max-width: 40em) {
+      padding-top: 20px;
+    }
     /*display: none;*/
   }
   h1 {
@@ -272,12 +275,13 @@ section.stadium {
   background-image: url("/img/stadium-dog.png"), url("/img/stadium-bg.jpg");
   background-size: auto, cover;
   background-position: 0% -25%, 0% 0%;
-  @media only screen and (max-width: 1000px) {
-    background-size: auto, auto;
-    padding-bottom: 20px;
-  }
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
+  @media only screen and (max-width: 1000px) {
+    background-size: auto, auto;
+    background-attachment: scroll;
+    padding-bottom: 20px;
+  }
   color: white;
 
   .top-text {
