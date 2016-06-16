@@ -274,6 +274,7 @@ section.stadium {
   background-position: 0% -25%, 0% 0%;
   @media only screen and (max-width: 1000px) {
     background-size: auto, auto;
+    padding-bottom: 20px;
   }
   background-repeat: no-repeat, no-repeat;
   background-attachment: fixed;
@@ -331,6 +332,9 @@ section.chiffres {
   color: white;
   padding-top: 100px;
   padding-bottom: 100px;
+  @media only screen and (max-width: 1000px) {
+    padding-top: 20px;
+  }
   .header {
     margin-bottom: 40px;
 
