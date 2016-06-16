@@ -280,7 +280,8 @@ section.stadium {
   @media only screen and (max-width: 1000px) {
     padding-bottom: 20px;
     background-size: auto, cover;
-    background-position: 100% 20%, 50%;
+    /*background-position: 100% 20%, 50%;*/
+    background-position: 20%;
     background-attachment: scroll;
   }
   color: white;
