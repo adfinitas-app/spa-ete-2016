@@ -273,6 +273,10 @@ section.stadium {
   padding-top: 50px;
   padding-bottom: 180px;
   background-image: url("/img/stadium-dog.png"), url("/img/stadium-bg.jpg");
+  background-image: url("/img/stadium-dog-large.png"), url("/img/stadium-bg.jpg");
+@media (max-width: 1366px) {
+background-image: url("/img/stadium-dog.png"), url("/img/stadium-bg.jpg");
+}
   background-size: auto, cover;
   background-position: 0% -25%, 0% 0%;
   background-repeat: no-repeat, no-repeat;
